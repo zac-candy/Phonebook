@@ -180,19 +180,7 @@ class Phonebook {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//This class represents the user interface of the application
 
 
 public class PhoneDirectory {
