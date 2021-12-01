@@ -1,4 +1,5 @@
 /* 
+
 Data Structures Assignment - 1
 Starting Date : 1/12/21
 Submission date : 5/12/21
@@ -25,7 +26,6 @@ class Phonebook {
         String fname;
         String lname;
         String number;
-        Boolean favorite;
         Contact next;
 
         //constructor for contact
@@ -173,11 +173,6 @@ class Phonebook {
             } while(cur != last.next);
         }
     }
-
-
-
-
-
 }
 
 //This class represents the user interface of the application
