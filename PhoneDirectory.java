@@ -196,6 +196,7 @@ public class PhoneDirectory {
             System.out.println("1.View the directory\n2.Add contact\n3.Delete contact\n4.search contact\n5.Change first name\n6.Change last name\n7.Change contact number\n8.filter contacts\n9.Exit");
             System.out.println("Enter your choice");
             choice = read.nextInt();
+            read.nextLine();
 
             switch(choice) {
                 case 1: 
@@ -203,7 +204,7 @@ public class PhoneDirectory {
                     break;
                 
                 case 2:
-                    System.out.println("Enter first name");
+                    System.out.println("Enter first name:");
                     String fn = read.nextLine();
                     System.out.println("Enter last name");
                     String ln = read.nextLine();
@@ -251,7 +252,7 @@ public class PhoneDirectory {
                     break;
 
                 case 8:
-                    System.out.println("Enter the prompt")
+                    System.out.println("Enter the prompt");
                     String pmt = read.nextLine();
                     chandan.filter(pmt);
                     break;
@@ -262,7 +263,7 @@ public class PhoneDirectory {
                     break;
 
                 default :System.out.println("Invalid choice. Please Enter valid choice");
-            }
+            };
         }
         read.close();
     }
