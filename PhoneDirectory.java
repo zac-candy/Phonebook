@@ -64,9 +64,48 @@ class Phonebook {
         }
     }
 
-    //method to delete contact
+    //method to delete contact/s from the phonebook
+    void deleteContact() {
+        if(last == null) {
+            System.out.println("Empty Directory");
+        } else if(last.next == last) {
+            last = null;
+        } else {
+            Contact temp = last.next;
+            last.next = temp.next;
+        }
+    }
 
-    
+
+    //method to search for a contact in a phonebook
+    void search(String key) {
+        if(last == null) {
+            System.out.println("list empty");
+        } else {
+            Contact cur = last.next;
+            String space = " ";
+            do {
+                if(key.equals(cur.fname.concat(space.concat(cur.lname)))) {
+                    System.out.println("Contact : " + cur.number);
+                    break;
+                }
+                cur = cur.next;
+            } while(cur != last.next);
+        }
+    }
+
+    //method to filter contacts in a phonebook
+    void filter(String key) {
+        if (last == null) {
+            System.out.println("Empty Directory");
+        } else {
+            Contact temp = last.next;
+
+        }
+    }
+
+
+
 }
 
 
@@ -91,9 +130,20 @@ public class PhoneDirectory {
         Phonebook chandan = new Phonebook();
         chandan.addContact("chandan", "M S", "6363224034");
         chandan.display();
+        chandan.search("chandan M S");
 
 
 
 
+
+
+
+
+
+
+
+
+
+        read.close();
     }
 }
